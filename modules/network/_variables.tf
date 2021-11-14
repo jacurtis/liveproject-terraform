@@ -31,7 +31,7 @@ variable "public_subnet_cidr_blocks" {
 
 variable "private_app_subnet_cidr_blocks" {
   type = map(string)
-  description = "The CIDR Blocks to use for public subnets"
+  description = "The CIDR Blocks to use for private app subnets"
   default = { 
     "A" = "172.16.4.0/24" 
     "B" = "172.16.5.0/24" 
@@ -41,7 +41,7 @@ variable "private_app_subnet_cidr_blocks" {
 
 variable "private_db_subnet_cidr_blocks" {
   type = map(string)
-  description = "The CIDR Blocks to use for public subnets"
+  description = "The CIDR Blocks to use for private db subnets"
   default = { 
     "A" = "172.16.8.0/24" 
     "B" = "172.16.9.0/24" 
