@@ -46,3 +46,16 @@ The above outline is the desired structure we are aiming to design our network. 
 **6. App Security Group**
 
 **7. Output: VPC ID**
+
+
+### Task \#2: Routing and Gateways
+
+**1. Create an Internet Gateway**
+
+**2. Create one Elastic IP for each public AZ**
+
+**3. Create a NAT Gateway and associate the EIP with it**
+
+**4. Create a public route and associate it with all three public subnets**
+
+**5. Create three private routes so there is one for each availability zone. Each private route will then be associated with its app and DB subnets accordingly.**
