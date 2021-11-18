@@ -59,3 +59,25 @@ The above outline is the desired structure we are aiming to design our network. 
 **4. Create a public route and associate it with all three public subnets**
 
 **5. Create three private routes so there is one for each availability zone. Each private route will then be associated with its app and DB subnets accordingly.**
+
+### Task \#3: Bastion Hosts and Testing Connectivity
+
+**1. Create an EC2 instance in each app AZ to act as a Bastion**
+
+**2. Create three bastion hosts**
+
+- Add one in each public AZ
+- Allow port 22 access to the Bastions
+
+**3. Allow only Bastions to connect to app instances**
+
+- This will be via a Security Group attached to the app instances that only allow connections from the Bastion SG
+
+**4. Test access manually using SSH**
+
+- Log into Bastion host and then jump to app instance
+
+**5. Test external access from app instances**
+
+- Be able to `ping 1.1.1.1` from the app instance
+- Be able to run `sudo yum install` from app instance
