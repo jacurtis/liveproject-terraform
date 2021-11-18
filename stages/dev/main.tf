@@ -28,6 +28,8 @@ module "compute" {
 
   project_name = var.project_name
   bastion_sg_id = module.security.bastion_sg_id
+  app_sg_id = module.security.app_sg_id
   public_subnets = module.network.public_subnets
+  private_app_subnets = module.network.private_app_subnets
   key_name = module.security.key_pair.key_name
 }

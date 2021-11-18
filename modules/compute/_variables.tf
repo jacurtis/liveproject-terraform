@@ -18,13 +18,27 @@ variable "bastion_sg_id" {
   type = string
 }
 
+variable "app_sg_id" {
+  description = "The Security Group to assign to App Hosts"
+}
+
 variable "bastion_instance_type" {
   description = "The Instance Type to use for Bastion Hosts"
   type = string
   default = "t2.micro"
 }
 
+variable "app_instance_type" {
+  description = "The Instance Type to use for Bastion Hosts"
+  type = string
+  default = "t2.micro"
+}
+
 variable "public_subnets" {
+  type = map(string)
+}
+
+variable "private_app_subnets" {
   type = map(string)
 }
 
